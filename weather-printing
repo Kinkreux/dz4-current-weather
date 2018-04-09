@@ -1,0 +1,4 @@
+<?php
+$weather_array = json_decode('weather-log.json', true);
+
+echo $weather_array;

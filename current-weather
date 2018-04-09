@@ -1,0 +1,14 @@
+<?php
+
+$server = "api.openweathermap.org/data/2.5/weather";
+$cityID = 524894;
+$API_key = 'b97601ecc5cd508dcadcb44e13e78566';
+
+$URL = 'https://'.$server.'?'.'id='.$cityID.'&'.'APPID='.$API_key;
+
+$weather_json = file_get_contents($URL);
+$weather_log = file_put_contents('weather-log.json', $weather_json);
+
+$weather_array = json_decode($weather_log, true);
+
+echo $weather_array;
