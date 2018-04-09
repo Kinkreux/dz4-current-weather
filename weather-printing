@@ -1,4 +1,6 @@
 <?php
-$weather_array = json_decode('weather-log.json', true);
+$weather_log = file_get_contents('./weather-log.json');
 
-echo $weather_array;
+$weather_array = json_decode($weather_log, true);
+
+echo '<pre>',print_r($weather_array),'</pre>';
