@@ -20,7 +20,7 @@ $weather_array['name'],
 ':<br>';
 echo 'Weather is ',
 mb_strtolower($weather_array['weather']['0']['main']),
-', to be more precise: ',
+', to be more precise - ',
 $weather_array['weather']['0']['description'],
 '.<br>';
 $weather_icon = 'http://openweathermap.org/img/w/' . $weather_array['weather']['0']['icon'] . '.png';
